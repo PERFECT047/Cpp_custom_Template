@@ -1,10 +1,12 @@
 #include<bits/stdc++.h>
-
+ 
 using namespace std;
-
+ 
 #pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
 #pragma GCC optimization ("unroll-loops")
+ 
+ 
 #define fastio() ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 #define MOD 1000000007
 #define MOD1 998244353
@@ -19,8 +21,8 @@ using namespace std;
 #define set_bits __builtin_popcountll
 #define sz(x) ((int)(x).size())
 #define all(x) (x).begin(), (x).end()
-
-
+ 
+ 
 typedef long long ll;
 typedef unsigned long long ull;
 typedef long double lld;
@@ -50,16 +52,18 @@ typedef vector<ll>::iterator vlit;
 typedef vector<char>::iterator vcit;
 typedef vector<string>::iterator vsit;
 // typedef tree<pair<int, int>, null_type, less<pair<int, int>>, rb_tree_tag, tree_order_statistics_node_update > pbds; // find_by_order, order_of_key
-
+ 
+ 
 void init_code(){
     fastio();
     #ifndef ONLINE_JUDGE
-	#define debug(x) cerr << #x <<" "; _print(x); cerr << nline;
-	#else
-	#define debug(x)
-	#endif 
+    #define debug(x) cerr << #x <<" "; _print(x); cerr << nline;
+    #else
+    #define debug(x)
+    #endif 
 }
-
+ 
+ 
 void _print(ll t) {cerr << t;}
 void _print(int t) {cerr << t;}
 void _print(string t) {cerr << t;}
@@ -67,7 +71,8 @@ void _print(char t) {cerr << t;}
 void _print(lld t) {cerr << t;}
 void _print(double t) {cerr << t;}
 void _print(ull t) {cerr << t;}
-
+ 
+ 
 template <class T, class V> void _print(pair <T, V> p);
 template <class T> void _print(vector <T> v);
 template <class T> void _print(set <T> v);
@@ -80,21 +85,20 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 
 
-int subarraysDivByK(vi& A, int K) {
-    vector<int> count(K);
-    count[0] = 1;
-    int prefix = 0, res = 0;
-    for (int a : A) {
-        prefix = (prefix + a % K + K) % K;
-        res += count[prefix]++;
-    }
-    return res;
+void solve() {
+	
+	
+
 }
-    
-
-int main() {
-
-	init_code();
  
-  return 0;
+ 
+int main()
+{
+    init_code();
+
+    ll tc = 1;
+    // cin>>tc;
+    while(tc--) solve();
+    
+    return 0;
 }
